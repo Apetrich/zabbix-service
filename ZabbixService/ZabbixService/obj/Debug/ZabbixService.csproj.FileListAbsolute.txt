@@ -1,0 +1,2 @@
+c:\users\nastya\documents\visual studio 2015\Projects\ZabbixService\ZabbixService\bin\Debug\ZabbixService.exe.config
+C:\Users\Nastya\Source\Repos\zabbix-service\ZabbixService\ZabbixService\bin\Debug\ZabbixService.exe.config
