@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Configuration.ConfigurationSettings;
 
 namespace ZabbixService
 {
@@ -20,6 +21,9 @@ namespace ZabbixService
                 new ZabbixService()
             };
             ServiceBase.Run(ServicesToRun);
+
+            var qwe =  AppSettings[""];
+
         }
     }
 }

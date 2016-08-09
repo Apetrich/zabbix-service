@@ -18,6 +18,8 @@ namespace ZabbixService
         private DateTime _lastRequestTime;
         private Timer _timer;
         private String _path;
+        private System.Diagnostics.EventLog eventLog1;
+
         public ZabbixService()
         { 
             this._lastRequestTime = DateTime.Now;
@@ -25,6 +27,17 @@ namespace ZabbixService
             this._path = @"c:\temp\zabbix-service.txt";
 
             InitializeComponent();
+            this.CanStop = true;
+            this.CanPauseAndContinue = true;
+            this.AutoLog = true;
+            eventLog1 = new System.Diagnostics.EventLog();
+            if (!System.Diagnostics.EventLog.SourceExists("MySource"))
+            {
+                System.Diagnostics.EventLog.CreateEventSource(
+                    "MySource", "MyNewLog");
+            }
+            eventLog1.Source = "MySource";
+            eventLog1.Log = "MyNewLog";
         }
 
         protected override void OnStart(string[] args)
@@ -35,12 +48,12 @@ namespace ZabbixService
                 File.Create(_path);
             }
 
-            var reader = new AppSettingsReader();
 
             var interval = ConfigurationManager.AppSettings["interval"];
+
             var lastRequestTime = ConfigurationManager.AppSettings["last-request-time"];
 
-            if(!String.IsNullOrWhiteSpace(lastRequestTime))
+            if (!String.IsNullOrWhiteSpace(lastRequestTime))
             {
                 using (StreamWriter sw = File.AppendText(_path))
                 {
@@ -54,27 +67,27 @@ namespace ZabbixService
                     sw.WriteLine("{0}: Service Started", DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss"));
                 }
             }
-
-            _timer.Interval = Convert.ToInt32(interval) * 60000;
-            _timer.Elapsed += new System.Timers.ElapsedEventHandler(TimerElapsed);
-
+            _timer.Interval = 3000;
+            _timer.Elapsed += TimerElapsed;
+            _timer.Start();
         }
 
         private void TimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             var currentTime = DateTime.Now;
-
+            ConfigurationManager.AppSettings["last-request-time"] = _lastRequestTime.ToString();
             using (StreamWriter sw = File.AppendText(_path))
             {
-                sw.WriteLine("{0}: TIMER TIK!!!!!", DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss"));
+                sw.WriteLine("{0}: TIMER TIKI!!!!!", ConfigurationManager.AppSettings["last-request-time"]);
             }
 
             _lastRequestTime = currentTime;
-            ConfigurationManager.AppSettings["last-request-time"] = _lastRequestTime.ToString();
+            
         }
 
         protected override void OnStop()
         {
+            eventLog1.WriteEntry("In OnStop");
         }
     }
 }

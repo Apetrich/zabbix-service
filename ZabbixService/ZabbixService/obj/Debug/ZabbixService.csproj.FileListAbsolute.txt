@@ -1,3 +1,10 @@
 c:\users\nastya\documents\visual studio 2015\Projects\ZabbixService\ZabbixService\bin\Debug\ZabbixService.exe.config
 C:\Users\Nastya\Source\Repos\zabbix-service\ZabbixService\ZabbixService\bin\Debug\ZabbixService.exe.config
 C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\bin\Debug\ZabbixService.exe.config
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\obj\Debug\ZabbixService.exe
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\obj\Debug\ZabbixService.pdb
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\bin\Debug\ZabbixService.exe
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\bin\Debug\ZabbixService.pdb
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\obj\Debug\ZabbixService.ProjectInstaller.resources
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\obj\Debug\ZabbixService.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixService\obj\Debug\ZabbixService.csprojResolveAssemblyReference.cache
