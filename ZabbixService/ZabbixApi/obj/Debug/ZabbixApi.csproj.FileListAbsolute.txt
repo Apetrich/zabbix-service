@@ -1,0 +1,7 @@
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\bin\Debug\ZabbixApi.dll
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\bin\Debug\ZabbixApi.pdb
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\obj\Debug\ZabbixApi.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\obj\Debug\ZabbixApi.dll
+C:\Users\User\Source\Repos\zabbix-service\ZabbixService\ZabbixApi\obj\Debug\ZabbixApi.pdb
